@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:James Ferguson
+ORG:Ferguson Demolition
+TEL;TYPE=WORK,VOICE:+0411894110
+EMAIL:james@fergusondemolition.com.au
+URL:http://fergusondemolition.com.au
+ADR;TYPE=WORK:;;4670, Bundaberg;QLD;;Australia
+END:VCARD
