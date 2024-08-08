@@ -23,7 +23,7 @@
             overflow: hidden;
         }
         .vcard-header {
-            background-color: #white;
+            background-color: #ccff00;
             padding: 20px;
             text-align: center;
         }
@@ -37,20 +37,20 @@
         .vcard-header h1 {
             margin: 0;
             font-size: 24px;
-            color: #333;
+            color: black;
         }
         .vcard-header button {
             margin-top: 10px;
             padding: 10px 15px;
-            background-color: #c0fe71;
-            color: black;
+            background-color: #00d000;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
         }
         .vcard-header button:hover {
-            background-color: #c0fe71;
+            background-color: #00a800;
         }
         .vcard-body {
             padding: 20px;
@@ -62,11 +62,11 @@
         .vcard-body div strong {
             display: block;
             font-size: 16px;
-            color: #000000;
+            color: black;
         }
         .vcard-body div a {
             font-size: 14px;
-            color: #000000;
+            color: #007BFF;
             text-decoration: none;
         }
         .vcard-body div a:hover {
@@ -79,7 +79,9 @@
         <div class="vcard-header">
             <img src="avatar.png" alt="Avatar">
             <h1>James Ferguson</h1>
-            <button onclick="downloadVCard()">+ Add to contacts</button>
+            <a href="James_Ferguson.vcf" download="James_Ferguson.vcf">
+                <button>+ Add to contacts</button>
+            </a>
         </div>
         <div class="vcard-body">
             <div>
@@ -100,27 +102,5 @@
             </div>
         </div>
     </div>
-    <script>
-        function downloadVCard() {
-            const vCardData = `
-BEGIN:VCARD
-VERSION:3.0
-FN:James Ferguson
-ORG:Ferguson Demolition
-TEL;TYPE=WORK,VOICE:+0411894110
-EMAIL:james@fergusondemolition.com.au
-URL:http://fergusondemolition.com.au
-ADR;TYPE=WORK:;;4670, Bundaberg;QLD;;Australia
-END:VCARD
-            `;
-            const blob = new Blob([vCardData], { type: 'text/vcard' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'James_Ferguson.vcf';
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-    </script>
 </body>
 </html>
